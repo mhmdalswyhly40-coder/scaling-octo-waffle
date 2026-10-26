@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0a1f">
+<title>اختبار الحاسب الآلي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><canvas id="fx"></canvas>
+<main class="card">
+  <section class="screen center" id="start">
+    <div class="emoji">💻</div>
+    <h1>اختبار الحاسب الآلي</h1>
+    <p class="sub">اختبر معلوماتك في البرمجة والشبكات وأنظمة التشغيل وقواعد البيانات.</p>
+    <div class="field">
+      <label for="name">اسم المتسابق</label>
+      <input id="name" maxlength="100" placeholder="اكتب اسمك قبل البدء" autocomplete="name">
+    </div>
+    <div class="chips"><span class="chip">⏱ 30 ثانية لكل سؤال</span><span class="chip">🎯 4 خيارات</span><span class="chip">⌨️ اختر بالأرقام 1–4</span></div>
+    <button class="btn" id="go">ابدأ الاختبار</button>
+  </section>
+
+  <section class="screen" id="quiz" hidden>
+    <div class="top">
+      <span id="qn"></span>
+      <div class="timer" id="timer">
+        <svg viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="22"/><circle class="fg" id="ring" cx="28" cy="28" r="22" pathLength="100"/></svg>
+        <span id="tt">30</span>
+      </div>
+    </div>
+    <div class="track"><div id="bar"></div></div>
+    <div id="qt"></div>
+    <div id="opts"></div>
+    <button class="btn" id="next" hidden>السؤال التالي</button>
+  </section>
+
+  <section class="screen center" id="result" hidden>
+    <div class="emoji" id="ri">🏆</div>
+    <h2 id="rt"></h2>
+    <p class="sub" id="rm"></p>
+    <div class="ring" id="sr"><b id="st">0%</b></div>
+    <div class="stats">
+      <div class="stat s-ok"><b id="sc">0</b><span>إجابة صحيحة</span></div>
+      <div class="stat s-no"><b id="sw">0</b><span>إجابة خاطئة</span></div>
+      <div class="stat s-t"><b id="sa">0</b><span>ثانية (المتوسط)</span></div>
+    </div>
+    <button class="btn" id="again">أعد الاختبار</button>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
