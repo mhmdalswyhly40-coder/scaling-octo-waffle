@@ -1,0 +1,5 @@
+worker.js
+wrangler.jsonc
+supabase.sql
+README.md
+*.zip
